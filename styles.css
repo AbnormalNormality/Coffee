@@ -188,20 +188,28 @@ button:hover {
 }
 
 .splashtext {
-    animation: zoomInOut 2s infinite ease;
+    animation: zoomInOut 5s infinite ease-in-out;
 }
 
 @keyframes zoomInOut {
-    0%, 100% {
-        transform: scale(1) rotate(180deg);
-    }
-    25% {
-        transform: scale(2) rotate(360deg);
+    0% {
+        transform: scale(0.1) rotate(0deg) translate(0, 0);
+        opacity: 0;
     }
     50% {
-        transform: scale(1.5) rotate(0deg);
+        transform: scale(1) rotate(1800deg) translate(0, 0);
+        opacity: 1;
     }
-    75% {
-        transform: scale(2) rotate(180deg);
+    60% {
+        transform: scale(1) rotate(2160deg) translate(0, 0);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(4) rotate(2880deg) translate(0, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.1) rotate(3600deg) translate(0, 0);
+        opacity: 0;
     }
 }
