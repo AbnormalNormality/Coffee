@@ -138,7 +138,7 @@ li::before {
 
 img {
     max-width: 100%;
-    max-height: 300px; /* Cap the height */
+    max-height: 300px;
     height: auto;
     display: block;
     margin: 0 auto;

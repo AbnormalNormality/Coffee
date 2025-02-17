@@ -3,5 +3,13 @@ async function clearCacheAndReload() {
         const cacheNames = await caches.keys();
         await Promise.all(cacheNames.map(name => caches.delete(name)));
     }
-    location.reload();
+
+    if (navigator.serviceWorker) {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        for (let registration of registrations) {
+            registration.unregister();
+        }
+    }
+
+    window.location.reload(true);
 }
