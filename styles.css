@@ -89,15 +89,6 @@ button:hover {
     background: #fafafa;
 }
 
-.grouped {
-    display: flex;
-    align-items: center;
-}
-
-.grouped * {
-    margin-left: auto;
-}
-
 summary::before {
     content: "?";
     margin-right: 1em;
@@ -125,6 +116,10 @@ ul {
 li::before {
     content: "- ";
     margin-right: 8px;
+}
+
+sub {
+    font-size: xx-small;
 }
 
 /* Add dark theme later */
