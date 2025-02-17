@@ -5,15 +5,12 @@
     --container-border: rgba(0, 0, 0, 0.1);
     --details-background: rgba(238, 238, 238, 0.5);
     --summary-background: rgba(255, 255, 255, 0.8);
-    --button-background: rgba(255, 255, 255, 0.8);
-    --button-border: rgba(0, 0, 0, 0.8);
     --link-color: #d55b8e;
     --hr-background: #000;
-
     --hover: #fafafa;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     :root {
         --background-color: #333;
         --text-color: #eee;
@@ -21,11 +18,8 @@
         --container-border: rgba(255, 255, 255, 0.1);
         --details-background: rgba(50, 50, 50, 0.5);
         --summary-background: rgba(70, 70, 70, 0.8);
-        --button-background: rgba(70, 70, 70, 0.8);
-        --button-border: rgba(255, 255, 255, 0.8);
         --link-color: #5bcefa;
         --hr-background: #fff;
-
         --hover: #555;
     }
 }
@@ -99,23 +93,6 @@ hr {
 a {
     color: var(--link-color);
 }
-
-/* Update button no longer n use
-button {
-    cursor: pointer;
-    padding-top: 5px;
-    padding-bottom: 3px;
-    border: 2px solid var(--button-border);
-    border-radius: 10px;
-    background: var(--button-background);
-    padding: 5px;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-    background: var(--hover);
-} */
 
 summary::before {
     content: "?";
