@@ -8,6 +8,9 @@
     --link-color: #d55b8e;
     --hr-background: #000;
     --hover: #fafafa;
+
+    --button-background: rgba(255, 255, 255, 0.8);
+    --button-border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +24,9 @@
         --link-color: #5bcefa;
         --hr-background: #fff;
         --hover: #555;
+
+        --button-background: rgba(70, 70, 70, 0.8);
+        --button-border: 1px solid rgba(255, 255, 255, 0.8);
     }
 }
 
@@ -122,10 +128,6 @@ li::before {
     margin-right: 8px;
 }
 
-sub {
-    font-size: xx-small;
-}
-
 .img-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -148,13 +150,58 @@ img {
 
 .enlargeOnHover {
     display: block;
-    cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 1;
 }
 
 .enlargeOnHover:hover {
     z-index: 10;
-    transform: scale(1.5);
+    transform: scale(2);
     position: relative;
+}
+
+button {
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border: var(--button-border);
+    border-radius: 10px;
+    background: var(--button-background);
+    padding: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: var(--hover);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smoltext {
+    font-size: 10px;
+    color: var(--text-color);
+}
+
+.splashtext {
+    animation: zoomInOut 2s infinite ease;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1) rotate(180deg);
+    }
+    25% {
+        transform: scale(2) rotate(360deg);
+    }
+    50% {
+        transform: scale(1.5) rotate(0deg);
+    }
+    75% {
+        transform: scale(2) rotate(180deg);
+    }
 }

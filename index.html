@@ -5,11 +5,15 @@
     <title>Title</title>
 
     <link rel="stylesheet" type="text/css" href="styles.css?v=<?php echo time(); ?>">
+
+    <script src="script.js?v=<?php echo time(); ?>"></script>
 </head>
 <body>
 
 <div class="container">
-    <h1>Alia!</h1>
+    <div class="center">
+        <h1 class="splashtext" style="margin-bottom: 10px;">Alia!</h1>
+    </div>
 
     <hr>
 
@@ -17,10 +21,12 @@
         <summary>General</summary>
         <div class="contents">
             <p>Hi, I'm Alia! I'm a transfem programmer from down under, who writes small Python scripts in their free time.</p>
+            <p>I have diagnosed ASD (Autism), ADHD, OCD, and Anxiety, so I can have trouble talking and communicating, and I might not act to your standards.</p>
+            <p>I'm also Pansexual! ... PUT STUFF HERE</p>
         </div>
     </details>
 
-    <details>
+    <details open>
         <summary>Activities</summary>
         <div class="contents">
             <p>I make small pieces of code in various languages. Though I prefer Python, I have also been learning C#, Unity, HTML, CSS, JS, F#, and Java.</p>
@@ -30,7 +36,7 @@
             <ul>
                 <li>Minecraft (Java Edition)</li>
                 <li>Stardew Valley</li>
-                <li><a href="https://discord.gg/2wgfHBGAtH" target="_blank">Scambled Scarlet</a></li>
+                <li><a href="https://discord.gg/2wgfHBGAtH" target="_blank">Scambled Scarlet</a> (check it out!)</li>
                 <li>Bloons TD6</li>
             </ul>
 
@@ -45,11 +51,25 @@
         </div>
     </details>
 
-    <details>
+    <details open>
         <summary>Interests</summary>
         <div class="contents">
             <p>Alongside programming, I also enjoy Yu-Gi-Oh, and drawing.</p>
-            <p>I have never lost a Yu-Gi-Oh match! <sub>Though I've never played competitively, and the last time I fought against someone other than myself was in primary school.</sub></p>
+            <p>I have never lost a Yu-Gi-Oh match! <a class="smoltext">Though I've never played competitively, and the last time I fought against someone other than myself was in primary school, but my point still stands.</a></p>
+
+            <p>My favourite show by far is Doctor Who, of which I have watched all modern episodes (only a few classic episodes).</p>
+
+            <hr>
+
+            <p>I don't have a general rule for the music I like, but I usually <b>hate</b> stuff like Taylor Swift and Sabrina Carpenter. Some of my favourite artists (ranked) are:</p>
+
+            <ul>
+                <li>Jazz Emu <a class="smoltext">(proud of the visual album Ego Death)</a></li>
+                <li>Lemon Demon</li>
+                <li>Weezer</li>
+                <li>Murray Gold</li>
+                <li>Weird Al</li>
+            </ul>
         </div>
     </details>
 
@@ -91,9 +111,11 @@
         <br>
         <li><a href="https://www.youtube.com/@cactixz" target="_blank">My friend's YouTube channel</a></li>
     </ul>
-</div>
 
-<script src="script.js?v=<?php echo time(); ?>"></script>
+    <div class="center">
+        <button onclick="clearCacheAndReload();">Update and Reload</button>
+    </div>
+</div>
 
 </body>
 </html>
