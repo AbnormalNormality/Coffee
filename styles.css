@@ -1,0 +1,130 @@
+body {
+    background: #eee;
+    font-family: Verdana, sans-serif;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    background-image: linear-gradient(
+        135deg,
+        rgba(91, 206, 250, 0.4),
+        rgba(245, 169, 184, 0.4),
+        rgba(255, 255, 255, 0.4),
+        rgba(245, 169, 184, 0.4),
+        rgba(91, 206, 250, 0.4)
+    );
+    background-attachment: fixed;
+}
+
+.container {
+    /* background: rgba(255, 255, 255, 0.8); */
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 5% auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.4)
+    );
+}
+
+details {
+    background: rgba(238, 238, 238, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+summary {
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: flex;
+}
+
+.contents {
+    padding: 0 10px;
+}
+
+.container details:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin: 3% auto;
+    height: 1px;
+    border: none;
+    background: #000;
+}
+
+a {
+    color: #d55b8e;
+}
+
+button {
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #fafafa;
+}
+
+.grouped {
+    display: flex;
+    align-items: center;
+}
+
+.grouped * {
+    margin-left: auto;
+}
+
+summary::before {
+    content: "?";
+    margin-right: 1em;
+    
+}
+
+details[open] summary::before {
+    content: "!";
+    margin-right: 1.15em;
+}
+
+details[open] summary {
+    margin-bottom: 1.2em;
+}
+
+summary:hover {
+    background: #fafafa;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0 0 20px;
+}
+
+li::before {
+    content: "- ";
+    margin-right: 8px;
+}
+
+/* Add dark theme later */
