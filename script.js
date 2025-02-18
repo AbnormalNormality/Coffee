@@ -13,3 +13,19 @@ async function clearCacheAndReload() {
 
     window.location.reload(true);
 }
+
+const detailsElements = document.querySelectorAll('details');
+
+document.addEventListener("keydown", event => {
+    if (event.isComposing || event.keyCode == 8) {
+        detailsElements.forEach(otherDetail => {
+            otherDetail.removeAttribute('open');
+        });
+    }
+
+    if (event.isComposing || event.keyCode == 13) {
+        detailsElements.forEach(otherDetail => {
+            otherDetail.setAttribute('open', true);
+        });
+    }
+});
