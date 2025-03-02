@@ -8,7 +8,6 @@
     --link-color: #d55b8e;
     --hr-background: #000;
     --hover: #fafafa;
-
     --button-background: rgba(255, 255, 255, 0.8);
     --button-border: 1px solid rgba(0, 0, 0, 0.8);
 }
@@ -24,7 +23,6 @@
         --link-color: #5bcefa;
         --hr-background: #fff;
         --hover: #555;
-
         --button-background: rgba(70, 70, 70, 0.8);
         --button-border: 1px solid rgba(255, 255, 255, 0.8);
     }
@@ -136,6 +134,39 @@ li::before {
     align-items: center;
 }
 
+.img-container {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid var(--container-border);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
 img {
     max-width: 100%;
     max-height: 300px;
@@ -183,15 +214,15 @@ button:hover {
     align-items: center;
 }
 
-.smoltext {
+.smallText {
     font-size: 10px;
 }
 
-.splashtext {
-    animation: zoomInOut 5s infinite ease-in-out;
+.splashText {
+    animation: batman 5s infinite ease-in-out;
 }
 
-@keyframes zoomInOut {
+@keyframes batman {
     0% {
         transform: scale(0.1) rotate(0deg) translate(0, 0);
         opacity: 0;
@@ -212,4 +243,8 @@ button:hover {
         transform: scale(0.1) rotate(3600deg) translate(0, 0);
         opacity: 0;
     }
+}
+
+.center *:not(:last-child) {
+    margin-right: 20px;
 }

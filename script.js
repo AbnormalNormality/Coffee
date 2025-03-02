@@ -18,14 +18,22 @@ const detailsElements = document.querySelectorAll('details');
 
 document.addEventListener("keydown", event => {
     if (event.isComposing || event.keyCode == 8) {
-        detailsElements.forEach(otherDetail => {
-            otherDetail.removeAttribute('open');
-        });
+        closeDetails();
     }
 
     if (event.isComposing || event.keyCode == 13) {
-        detailsElements.forEach(otherDetail => {
-            otherDetail.setAttribute('open', true);
-        });
+        openDetails();
     }
 });
+
+function openDetails() {
+    detailsElements.forEach(otherDetail => {
+        otherDetail.setAttribute('open', true);
+    });
+};
+
+function closeDetails() {
+    detailsElements.forEach(otherDetail => {
+        otherDetail.removeAttribute('open');
+    });
+};
