@@ -165,6 +165,8 @@ li::before {
     font-size: 1em;
     word-wrap: break-word;
     white-space: normal;
+    -webkit-text-stroke: 0.5px var(--background-color);
+    color: var(--text-color);
 }
 
 img {
