@@ -250,3 +250,7 @@ button:hover {
 .center *:not(:last-child) {
     margin-right: 20px;
 }
+
+.suggested {
+    color: var(--link-color);
+}
